@@ -1,15 +1,31 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Welcome
+permalink: /
 ---
 
-Some information about you!
+<img src="{{ site.avatar }}" alt="Avatar" style="border-radius: 50%; width: 100px;">
 
-### More Information
+# 👋 Hello, I'm {{ site.name }}
 
-A place to include any other types of information that you'd like to include about yourself.
+{{ site.description }}
 
-### Contact me
+---
 
-[email@domain.com](mailto:email@domain.com)
+## ✍️ Latest Posts
+
+<ul>
+  {% for post in site.posts limit:5 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a><br>
+      <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+
+---
+
+## 🔗 Explore
+- [About](/about/)
+- [Projects](/projects/)
+- [Contact](mailto:{{ site.footer-links.email }})
