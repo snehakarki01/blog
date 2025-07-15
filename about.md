@@ -1,14 +1,14 @@
 ---
-layout: page
+layout: default
 title: Welcome
 permalink: /
 ---
 
-<img src="{{ site.avatar }}" alt="Avatar" style="border-radius: 50%; width: 100px;">
-
-# 👋 Hello, I'm {{ site.name }}
-
-{{ site.description }}
+<div style="text-align: center; margin-top: 40px;">
+  <img src="{{ site.avatar }}" alt="Avatar" style="border-radius: 50%; width: 120px;" />
+  <h1>👋 Hello, I'm {{ site.name }}</h1>
+  <p>{{ site.description }}</p>
+</div>
 
 ---
 
@@ -17,7 +17,7 @@ permalink: /
 <ul>
   {% for post in site.posts limit:5 %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a><br>
+      <a href="{{ post.url }}">{{ post.title }}</a><br />
       <small>{{ post.date | date: "%B %d, %Y" }}</small>
     </li>
   {% endfor %}
@@ -26,6 +26,7 @@ permalink: /
 ---
 
 ## 🔗 Explore
+
 - [About](/about/)
-- [Projects](/projects/)
+- [Projects](/projects/)  
 - [Contact](mailto:{{ site.footer-links.email }})
