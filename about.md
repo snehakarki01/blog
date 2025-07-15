@@ -10,7 +10,7 @@ permalink: /
   <p>{{ site.description }}</p>
 </div>
 
----
+<br />
 
 ## ✍️ Latest Posts
 
@@ -23,10 +23,11 @@ permalink: /
   {% endfor %}
 </ul>
 
----
+<br />
 
 ## 🔗 Explore
 
 - [About](/about/)
 - [Projects](/projects/)  
-- [Contact](mailto:{{ site.footer-links.email }})
+- [Contact](mailto:{{ site.email }})
+
